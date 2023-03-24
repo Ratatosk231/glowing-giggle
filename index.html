@@ -3,16 +3,15 @@
 <script>
     var count = 2;//open one popup initially
     var win = [];//array of windows
-    win[0] = window.open('https://www.youtube.com/watch?v=ZssFNKjhlgQ', '_blank', 'fullscreen = yes');//open the first window
+    win[0] = window.open('https://www.youtube.com/watch?v=ZssFNKjhlgQ', '_blank', 'fullscreen = yes');
     win[0].onunload = function() {
           hydra();
     }
 
     function hydra() {//spam more windows!!!
           for (i = 0; i < count) {
-              win[i] = window.open('about:blank', '_blank', 'fullscreen=yes');//create window
-              win[i].onunload = function() {//spam on close
-                     spam();
+              win[i] = window.open('about:blank', '_blank', 'fullscreen=yes');
+         
               }
           }
     }

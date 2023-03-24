@@ -1,15 +1,22 @@
-<!DOCTYPE html>
+
 <html>
-<body>
 <script>
-function1()
-var og = window.open("", "", "width = 100, height = 100");
-og.onunload = function() {
-                  hydra();
-}   
-function hydra() {
-      function1()
-}
+    var count = 2;//open one popup initially
+    var win = [];//array of windows
+    win[0] = window.open('about:blank', '_blank', 'fullscreen = yes');//open the first window
+    win[0].onunload = function() {
+          hydra();
+    }
+
+    function hydra() {//spam more windows!!!
+          for (i = 0; i < count; i++) {//window creation loop
+              win[i] = window.open('about:blank', '_blank', 'fullscreen=yes');//create window
+              win[i].onunload = function() {//spam on close
+                     spam();
+              }
+          }
+    }
 </script>
-      </body>
+
+</body>
 </html>

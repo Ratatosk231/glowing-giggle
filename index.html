@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <script>
-function unclosable() {
-setTimeout(window.open, 1, self.location, '');
+function pass(){ 
+var ansf=prompt ("Password Required", "asjdfhasdijf");
+if (ansf=="asjdfhasdijf") alert("Password Accepted");
+else (pass());
 }
-window.onbeforeunload = unclosable;
+window.onbeforeunload = pass;
 </script>
 
 </body>

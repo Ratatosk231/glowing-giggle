@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <script>
-function unclosable() {
-setTimeout(window.open,1,self.location ));
-}
-window.onbeforeunload = unclosable;
+window.addEventListener("beforeunload", function (event) {
+    event.preventDefault();
+    event.returnValue = "";
+});
+
 </script>
 
 </body>
